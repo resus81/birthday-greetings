@@ -138,7 +138,6 @@
             
             <img src="https://cdn-icons-png.flaticon.com/128/12123/12123627.png" alt="Hearts doodle" class="hearts-doodle">
         </div>
-        <img src="https://static.thenounproject.com/png/11275-200.png" alt="Watermark" class="watermark">
     </div>
 
     <audio id="bg-music" loop>
@@ -184,7 +183,7 @@
 
       document.addEventListener('click', function() {
         const music = document.getElementById('bg-music');
-    
+        music.volume = 0.5
     // Play the music with sound active
     music.play().catch(error => {
       console.log("Autoplay was still blocked by the browser:", error);
