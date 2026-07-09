@@ -141,6 +141,10 @@
         <img src="https://static.thenounproject.com/png/11275-200.png" alt="Watermark" class="watermark">
     </div>
 
+    <audio id="bg-music" loop>
+      <source src="./Bruno_Mars_Just_The_Way_You_Are_Lyrics.mp3" type="audio/mpeg">
+    </audio>
+
     <script>
         function createConfetti() {
             const colors = ['#fff', '#ffd700', '#ff6b6b', '#23d5ab', '#ff9a9e'];
@@ -177,6 +181,17 @@
         }
 
         createConfetti();
+
+      document.addEventListener('click', function() {
+        const music = document.getElementById('bg-music');
+    
+    // Play the music with sound active
+    music.play().catch(error => {
+      console.log("Autoplay was still blocked by the browser:", error);
+    });
+  }, { once: true }); // '{ once: true }' ensures this code only runs on the first click
+  
     </script>
+    
 </body>
 </html>
